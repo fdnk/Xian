@@ -1,6 +1,6 @@
-title: Xian   # your title
-author: Xian # your name
-description: Just have some fun here # your description
+title: Reflexiones sobre Álgebra   # your title
+author: Fernando Danko # your name
+description: Acá voy poniendo cosas piolas # your description
 avatar: /images/avatar.png # change avatar
 
 # Build Settings
@@ -10,11 +10,11 @@ highlighter: rouge
 # Pagination
 paginate: 5
 paginate_path: "/page:num/"
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 # Comments
-# disqus:
-#   shortname: xxxx-xxxxx-xxx   # your disqus shortname
+#disqus:
+#  shortname: fernandoivndanko   # your disqus shortname
 
 # Google Analytics
 # google_analytics: xx-xxxxxxxx-1  # your google analytics

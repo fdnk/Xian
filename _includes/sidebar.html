@@ -1,16 +1,16 @@
 <section id="sidebar">
   <div id="avatar">
-    <a href="/"><div class="border">
-      <div class="img_container"><img src ="{{ site.avatar}}" /></div>
+    <a href="{{base}}/"><div class="border">
+       <div class="img_container"><img src ="{{base}}/{{ site.avatar}}" /></div>
     </div></a>
   </div>
 
-  <div class="title"><a href="/">{{ site.title }}</a></div>
+  <div class="title"><a href="{{base}}/">{{ site.title }}</a></div>
   <ul class="site_nav">
-    <li><a href="/" {% if page.active == "index" %}class="selected"{% endif %} class="nav_items"> Home </a></li>
-    <li><a href="/archive" {% if page.active == "archive" %}class="selected"{% endif %} class="nav_items"> Archive </a></li>
-    <li><a href="/about" {% if page.active == "about" %}class="selected"{% endif %} class="nav_items">About</a></li>
-    <li><a href="/feed.xml" class="nav_items"> feed </a></li>
+    <li><a href="{{base}}/" {% if page.active == "index" %}class="selected"{% endif %} class="nav_items"> Principal </a></li>
+    <li><a href="{{base}}/archive" {% if page.active == "archive" %}class="selected"{% endif %} class="nav_items"> Archivo </a></li>
+    <li><a href="{{base}}/about" {% if page.active == "about" %}class="selected"{% endif %} class="nav_items">Descripción</a></li>
+    <li><a href="{{base}}/feed.xml" class="nav_items"> feed </a></li>
   </ul>
 
 

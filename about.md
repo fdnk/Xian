@@ -1,13 +1,9 @@
 ---
 layout: post
-title: About
+title: Descripción
 active: about
 ---
 
+Acá voy subiendo resoluciones, ejercicios, proyecciones y #reflexiones# sobre contenidos relacionados a la materia Álgebra II 61.08 / 81.08 de FIUBA.
 
-This is a simple two-column [jekyll](https://jekyllrb.com/) theme delicated to wrting.
-
-You can get to know more about this theme [here]().
-
-
-Theme inspire by [Farbtle](https://github.com/YCF/Farbtle), I steal most CSS from him.
+Le agradezco a [KrisYu](https://github.com/KrisYu/Xian) por diseñar este theme que le robé.
