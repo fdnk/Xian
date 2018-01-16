@@ -7,4 +7,5 @@ Utilicé el template de Xian, el readme original puede encontrarse en ``Xian.md`
   - Fix para poder trabajar con rutas relativas. Tomado de
       https://ricostacruz.com/til/relative-paths-in-jekyll
   - Agregado MatJax CDN
+  - Agregados tags: http://longqian.me/2017/02/09/github-jekyll-tag/
 
