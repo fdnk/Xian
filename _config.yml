@@ -1,6 +1,6 @@
 title: Reflexiones sobre Álgebra   # your title
-author: Fernando Danko # your name
-description: Acá voy poniendo cosas piolas # your description
+author: Fernando Iván Danko # your name
+description: Resoluciones, ejercicios, proyecciones y reflexiones sobre contenidos relacionados a la materia Álgebra II 61.08 / 81.08 de FIUBA 
 avatar: /images/avatar.png # change avatar
 
 # Build Settings
@@ -8,7 +8,7 @@ markdown: kramdown
 highlighter: rouge
 
 # Pagination
-paginate: 5
+paginate: 10
 paginate_path: "/page:num/"
 plugins: [jekyll-paginate]
 
