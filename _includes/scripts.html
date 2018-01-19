@@ -6,4 +6,55 @@
 MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
+
+MathJax.Hub.Config({
+  TeX: {
+    Macros: {
+	  // Quick notation for vector spaces and numbers
+      NN: ["{  \\mathbb{R}^{#1}  }", 1, ""],
+	  ZZ: ["{  \\mathbb{Z}^{#1}  }", 1, ""],
+	  QQ: ["{  \\mathbb{Q}^{#1}  }", 1, ""],
+	  RR: ["{  \\mathbb{R}^{#1}  }", 1, ""],
+	  CC: ["{  \\mathbb{C}^{#1}  }", 1, ""],
+	  PP: ["{  \\mathcal{P}^{#1}  }", 1, ""],
+	  Cf: ["{  \\mathcal{C}^{#1}  }", 1, ""],
+	  
+      // Generic spaces and fields
+	  K: ["{ \\mathbb{C}^{#1} }", 1, ""],
+	  VV: ["{ \\mathbb{V} }"],
+	  WW: ["{ \\mathbb{W} }"],
+	  
+	  // General vector spaces notation
+	  space: ["{ \\mathbb{#1} }", 1],
+	  field: ["{ \\mathbb{#1} }", 1],
+	  
+	  // Matrix
+	  mtx: ["{ \\begin{bmatrix} #1 \\end{bmatrix} }", 1],
+	  
+	  // Others
+	  ortog: ["{ {#1}^{\\perp} }", 1],
+	  inner: ["{ \\left \\langle #1, #2 \\right \\rangle }",2],
+	  trans: ["{ {#1}^{\\text{T}} }", 1],
+	  herm: ["{ {#1}^{\\text{H}} }", 1],
+	  conj: ["{ \\bar{#1} }", 1],
+	  norm: ["{ \\left \\| {#1} \\right \\| }", 1],
+	  penrose: ["{ {#1}^{\\dagger} }", 1],
+	  proy: ["{ \\mathcal{P}_{#1} \\left (  #2  \\right ) }", 2],
+	  
+	  // Spaces
+	  gen: ["{ gen \\left \\lbrace #1 \\right \\rbrace }",1],
+	  dim: ["{ dim \\left ( #1 \\right ) }",1],
+	  
+	  // Matrix Fundamental Spaces
+	  col: ["{ Col \\left ( #1 \\right ) }",1],
+	  fil: ["{ Fil \\left ( #1 \\right ) }",1],
+	  nul: ["{ Nul \\left ( #1 \\right ) }",1],
+	  
+	  // Linear Transform
+	  nu: ["{ Nu \\left [ #1 \\right ] }",1],
+	  im: ["{ Im \\left [ #1 \\right ] }",1]
+	  
+    }
+  }
+});
 </script>

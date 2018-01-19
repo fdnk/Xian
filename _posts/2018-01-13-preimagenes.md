@@ -8,20 +8,16 @@ tag: inicial
 Una transformación lineal mapea los elementos de su dominio en elementos de su imagen. Aquí, pretendemos hacer el camino inverso: Dado un vector de la imágen de la transformación lineal, hallar todos los vectores del dominio que son mapeados allí al transformarlos. 
 
 $$
-\newcommand{\field}[1]{\mathbb{#1}}
-\newcommand{\space}[1]{\mathbb{#1}}
-\renewcommand{\mtx}[1]{  { \left[\begin{matrix}#1\end{matrix}\right] }  }
-
-%\newcommand{\Trx}[1]{T\left(#1\right)}
+\newcommand{\Trx}[1]{T\left( #1 \right)}
 $$
 
 # Aclaración respecto a espacios de dimensión finita
-En este artículo vamos a trabajar con una tranformación lineal $$T:\space{V} \rightarrow \space{W}$$, y consideramos que $$\space{V}$$ es un espacio de dimensión finita, y por ende, podemos decir que existen bases de dicho espacio.
+En este artículo vamos a trabajar con una tranformación lineal $$T:\VV \rightarrow \WW$$, y consideramos que $$\VV$$ es un espacio de dimensión finita, y por ende, podemos decir que existen bases de dicho espacio.
 
-Este caso es el más simple para analizar, y el que utilizamos hasta el cansancio en la materia. Sin embargo, sobre todo cuando trabajamos en espacios de funciones como $$\mathcal{C}^1$$ o similares, no podemos asumir que existe una base de dicho espacio, ni mucho menos calcularla.
+Este caso es el más simple para analizar, y el que utilizamos hasta el cansancio en la materia. Sin embargo, sobre todo cuando trabajamos en espacios de funciones como $$\Cf[1]$$ o similares, no podemos asumir que existe una base de dicho espacio, ni mucho menos calcularla.
 
 # Forma general
-Sea $$B=\{v_1, \ldots, v_k\}$$ una base de $$\space{V}$$, sobre la cual tenemos definida la transformación lineal $$T:\space{V} \rightarrow \space{W}$$ por:
+Sea $$B=\{v_1, \ldots, v_k\}$$ una base de $$\VV$$, sobre la cual tenemos definida la transformación lineal $$T:\VV \rightarrow \WW$$ por:
 
 $$
 \begin{align}
@@ -31,11 +27,11 @@ $$
 \end{align}
 $$
 
-Donde $$w_1, \ldots, w_k \in \space{W}$$, pero tengamos en cuenta que no necesariamente son una base de $$\space{W}$$ (esto pasaría sólo si $$T$$ fuese un epimorfismo).
+Donde $$w_1, \ldots, w_k \in \WW$$, pero tengamos en cuenta que no necesariamente son una base de $$\WW$$ (esto pasaría sólo si $$T$$ fuese un epimorfismo).
 
-**Problema**: Dado un vector $$y\in\space{W}$$ hallar todos los $$x\in\space{V}$$ tales que $$T(x)=y \tag{I}\label{eq:preimagen_y}$$.
+**Problema**: Dado un vector $$y\in\WW$$ hallar todos los $$x\in\VV$$ tales que $$T(x)=y \tag{I}\label{eq:preimagen_y}$$.
 
-Dado que tenemos una base de $$\space{V}$$, podemos escribir:
+Dado que tenemos una base de $$\VV$$, podemos escribir:
 
 $$ x = \alpha_1 v_1 + \ldots + \alpha_k v_k $$
 
@@ -60,37 +56,37 @@ No resta más que despejar las constantes $$\alpha_1, \ldots, \alpha_k$$ que sat
 $$x = \alpha_1 v_1 + \ldots + \alpha_k v_k$$
 
 ## Notación
-Dada $$T:\space{V} \rightarrow \space{W}$$, llamanos $$T^{-1}(y)$$ al **conjunto** dado por: $$\{x\in \space{V}: T(x)=y\}$$. Equivalenemente, decimos que $$x$$ es la preimagen de $$y$$ a través de $$T$$.
+Dada $$T:\VV \rightarrow \WW$$, llamanos $$T^{-1}(y)$$ al **conjunto** dado por: $$\{x\in \VV: T(x)=y\}$$. Equivalenemente, decimos que $$x$$ es la preimagen de $$y$$ a través de $$T$$.
 
 ## Ejemplo
-Sea $$T:\space{R}^3 \rightarrow \space{R}^{2 \times 2}$$, hallar $$T^{-1}\left( \mtx{3 & 5 \\ 0 & -1}\right)$$, donde:
+Sea $$T:\RR[3] \rightarrow \RR[2 \times 2]$$, hallar $$T^{-1}\left( \mtx{3 & 5 \\ 0 & -1}\right)$$, donde:
 
 $$\begin{align*}
-	T(\mtx{1 & 1 & 0}^T) &= \mtx{1 & 2 \\ 0 & 0}\\
-	T(\mtx{0 & 1 & 0}^T) &= \mtx{0 & 1 \\ 0 & 1}\\
-	T(\mtx{1 & 0 & 1}^T) &= \mtx{2 & 2 \\ 0 & -2}\\
+	\Trx{\trans{\mtx{1 & 1 & 0}} } &= \mtx{1 & 2 \\ 0 & 0}\\
+	\Trx{\trans{\mtx{0 & 1 & 0}} } &= \mtx{0 & 1 \\ 0 & 1}\\
+	\Trx{\trans{\mtx{1 & 0 & 1}} } &= \mtx{2 & 2 \\ 0 & -2}\\
 \end{align*}$$
 
 
 
 
-**Resolución**: Debemos hallar los vectores $$x \in \space{R}^3$$ tales que $$T(x) = \mtx{3 & 5 \\ 0 & -1} $$.
+**Resolución**: Debemos hallar los vectores $$x \in \RR[3]$$ tales que $$T(x) = \mtx{3 & 5 \\ 0 & -1} $$.
 
 Como el conjunto $$B=\left\{\mtx{1\\1\\0}, \mtx{0\\1\\0}, \mtx{1\\0\\1} \right\} $$
-es base de $$\space{R}^3$$ *(verificarlo)*,  la transformación lineal queda unívocamente definida.
+es base de $$\RR[3]$$ *(verificarlo)*,  la transformación lineal queda unívocamente definida.
 
 
-Como $$B$$ es base de $$\space{R}^3$$, puedo escribir el vector $$x$$ como combinación lineal de sus elementos:
+Como $$B$$ es base de $$\RR[3]$$, puedo escribir el vector $$x$$ como combinación lineal de sus elementos:
 
 $$x = \alpha_1 \mtx{1\\1\\0} + \alpha_2 \mtx{0\\1\\0} + \alpha_3 \mtx{1\\0\\1} $$
 
 Aplico la transformación lineal:
 
-$$T(x) =  \left( \alpha_1 \mtx{1\\1\\0} + \alpha_2 \mtx{0\\1\\0} + \alpha_3 \mtx{1\\0\\1}\right) $$
+$$T(x) =  \Trx{ \alpha_1 \mtx{1\\1\\0} + \alpha_2 \mtx{0\\1\\0} + \alpha_3 \mtx{1\\0\\1} } $$
 
 Como $$T$$ es transformación lineal:
 
-$$T(x) =  \alpha_1 T{\mtx{1\\1\\0}} + \alpha_2 T{\mtx{0\\1\\0}} + \alpha_3 T{\mtx{1\\0\\1}} $$
+$$T(x) =  \alpha_1 \Trx{\mtx{1\\1\\0}} + \alpha_2 \Trx{\mtx{0\\1\\0}} + \alpha_3 \Trx{\mtx{1\\0\\1}} $$
 
 Reemplazando cada imagen, y como $$T(x)=\mtx{3 & 5 \\ 0 & -1}$$:
 
@@ -109,21 +105,20 @@ $$
 \right.
 $$
 
-De donde se despeja: $$\alpha_1=2-\alpha_2,\;  \alpha_3=(1+\alpha_2)/2,\;   \alpha_2 \in \field{R}$$
+De donde se despeja: $$\alpha_1=2-\alpha_2,\;  \alpha_3=(1+\alpha_2)/2,\;   \alpha_2 \in \RR$$
 
 Con dichos valores, recomponemos el vector $$x$$:
  
-$$x = (2-\alpha_2) \mtx{1\\1\\0} + \alpha_2 \mtx{0\\1\\0} + (1+\alpha_2)/2 \mtx{1\\0\\1},\, \alpha_2 \in \field{R}$$
+$$x = (2-\alpha_2) \mtx{1\\1\\0} + \alpha_2 \mtx{0\\1\\0} + (1+\alpha_2)/2 \mtx{1\\0\\1},\, \alpha_2 \in \RR$$
 
 Reordenando y utilizando la notación de $$T^{-1}$$ obtenemos finalmente:
 
-$$T^{-1}\left( \mtx{3 & 5\\0 & -1} \right) = \lambda \mtx{
--1/2\\0\\1/2} + \mtx{5/2\\2\\1/2},\; \lambda \in \field{R}$$
+$$T^{-1}\left( \mtx{3 & 5\\0 & -1} \right) = \lambda \mtx{-1/2\\0\\1/2} + \mtx{5/2\\2\\1/2},\; \lambda \in \RR$$
 
 # Relación entre espacio nulo y nucleo de la TL
-En el ejemplo anterior, el vector $$\mtx{-1/2 &0&1/2}^T$$ es también la solución del sistema homogéneo asociado al sistema de ecuaciones \eqref{eq:sistema_eq_ejemplo}, o visto de otra forma, el generador del espacio nulo de la matriz asociada al sistema.
+En el ejemplo anterior, el vector $$\trans{ \mtx{-1/2 &0&1/2} }$$ es también la solución del sistema homogéneo asociado al sistema de ecuaciones \eqref{eq:sistema_eq_ejemplo}, o visto de otra forma, el generador del espacio nulo de la matriz asociada al sistema.
 
-Este vector, es también el generador del núcleo de la tranformación lineal. Es fácil darse cuenta que si $$x$$ es **una** preimagen de $$y$$ por $$T$$ (esto es, si $$T(x)=y$$), al sumarle algo del núcleo de la tranformación, obtenemos otra preimagen de $$y$$. Es decir, si $$\eta$$ pertenece al núcleo de $$T$$, luego $$x+k \eta$$ es preimagen de $$y$$, pues $$T(x+k \eta) = T(x)+ k T(\eta) = y + k 0_{\space{R}^3} = y$$
+Este vector, es también el generador del núcleo de la tranformación lineal. Es fácil darse cuenta que si $$x$$ es **una** preimagen de $$y$$ por $$T$$ (esto es, si $$T(x)=y$$), al sumarle algo del núcleo de la tranformación, obtenemos otra preimagen de $$y$$. Es decir, si $$\eta$$ pertenece al núcleo de $$T$$, luego $$x+k \eta$$ es preimagen de $$y$$, pues $$T(x+k \eta) = T(x)+ k T(\eta) = y + k 0_{\RR[3]} = y$$
 
 Esta es una relación importante que queda a cuenta del lector profundizar.
  
