@@ -16,13 +16,13 @@ MathJax.Hub.Config({
 	  QQ: ["{  \\mathbb{Q}^{#1}  }", 1, ""],
 	  RR: ["{  \\mathbb{R}^{#1}  }", 1, ""],
 	  CC: ["{  \\mathbb{C}^{#1}  }", 1, ""],
-	  PP: ["{  \\mathcal{P}^{#1}  }", 1, ""],
+	  PP: ["{  \\text{P}_{#1}  }", 1, ""],
 	  Cf: ["{  \\mathcal{C}^{#1}  }", 1, ""],
 	  
       // Generic spaces and fields
-	  K: ["{ \\mathbb{C}^{#1} }", 1, ""],
-	  VV: ["{ \\mathbb{V} }"],
-	  WW: ["{ \\mathbb{W} }"],
+	  K: ["{ \\mathbb{K}^{#1} }", 1, ""],
+	  VV: "{ \\mathbb{V} }",
+	  WW: "{ \\mathbb{W} }",
 	  
 	  // General vector spaces notation
 	  space: ["{ \\mathbb{#1} }", 1],
@@ -40,6 +40,9 @@ MathJax.Hub.Config({
 	  norm: ["{ \\left \\| {#1} \\right \\| }", 1],
 	  penrose: ["{ {#1}^{\\dagger} }", 1],
 	  proy: ["{ \\mathcal{P}_{#1} \\left (  #2  \\right ) }", 2],
+	  eqdef: "\\triangleq",
+      Re: ["{ \\mathfrak{Re} \\left( #1 \\right) }", 1],
+	  Im: ["{ \\mathfrak{Im} \\left( #1 \\right) }", 1],
 	  
 	  // Spaces
 	  gen: ["{ gen \\left \\lbrace #1 \\right \\rbrace }",1],
