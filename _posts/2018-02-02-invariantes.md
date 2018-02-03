@@ -2,7 +2,7 @@
 title: Subespacios Invariantes
 date: 2018-02-02 11:42:00 -0300
 layout: post
-tag: intermedio
+tag: intermedio, borrador
 ---
 
 Se dice que un subespacio $$\ss{S}$$ es invariante por A, o A-invariante, sii $$\forall x \in \ss{S},\, Ax \in \ss{S} $$.
