@@ -18,15 +18,16 @@ MathJax.Hub.Config({
 	  CC: ["{  \\mathbb{C}^{#1}  }", 1, ""],
 	  PP: ["{  \\text{P}_{#1}  }", 1, ""],
 	  Cf: ["{  \\mathcal{C}^{#1}  }", 1, ""],
-	  
-      // Generic spaces and fields
-	  K: ["{ \\mathbb{K}^{#1} }", 1, ""],
-	  VV: "{ \\mathbb{V} }",
-	  WW: "{ \\mathbb{W} }",
+	  KK: ["{  \\mathbb{K}^{#1} }", 1, ""],
 	  
 	  // General vector spaces notation
 	  space: ["{ \\mathbb{#1} }", 1],
 	  field: ["{ \\mathbb{#1} }", 1],
+	  ss: ["{ \\text{#1} }", 1],
+
+	  // Usual Generic spaces
+	  VV: "{ \\mathbb{V} }",
+	  WW: "{ \\mathbb{W} }",
 	  
 	  // Matrix
 	  mtx: ["{ \\begin{bmatrix} #1 \\end{bmatrix} }", 1],
@@ -43,6 +44,11 @@ MathJax.Hub.Config({
 	  eqdef: "\\triangleq",
       Re: ["{ \\mathfrak{Re} \\left( #1 \\right) }", 1],
 	  Im: ["{ \\mathfrak{Im} \\left( #1 \\right) }", 1],
+	  
+	  // Operators
+	  then: "\\Rightarrow",
+	  sii: "\\text{sii}",
+	  qed: "\\tag*{$\\square$}",
 	  
 	  // Spaces
 	  gen: ["{ gen \\left \\lbrace #1 \\right \\rbrace }",1],
