@@ -2,7 +2,7 @@
 title: Aproximación de funciones
 date: 2018-01-26 11:42:00 -0300
 layout: post
-tag: intermedio, borrador
+tag: intermedio borrador
 ---
 
 Una práctica común en ingeniería es la de aproximar funciones por otras más simples. El objeto no es --como podríamos pensar-- el de poder calcular un conseno o un logaritmo mediante un cálculo cerrado mediante un polinomio o similar. Muchas veces se desea obtener un modelo sencillo que explique fenómenos complejos, y es justamente en la sencillez del modelo donde radica su potencia.

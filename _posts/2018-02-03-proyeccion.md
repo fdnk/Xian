@@ -1,7 +1,7 @@
 ---
 title: Matriz de Proyección
 date: 2018-02-03 06:24:00 -0300
-tags: intermedio, borrador
+tags: intermedio borrador
 layout: post
 ---
 

@@ -2,7 +2,7 @@
 title: Normas, PI y PIC
 date: 2018-01-26 11:42:00 -0300
 layout: post
-tag: intermedio, borrador
+tag: intermedio borrador
 ---
 
 La desigualdad de Rayleigh nos permite encontrar los puntos de norma unitaria que maximizan y minimizan una forma cuadrática. Puede ser que la forma cuadrática a optimizar sea una norma inducida por algún producto interno, entonces empiezan las cuestiones ¿la norma es la norma euclídea de toda la vida, relacionada al producto interno canónico o debo usar la norma inducida por el producto interno que estoy empleando? Vamos.
