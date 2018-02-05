@@ -1,11 +1,8 @@
-<div class="wrap-collabsible" data="{% increment counter %}">
-  <input id="collapsible-{{ counter }}" class="toggle" type="checkbox">
-  <label for="collapsible-{{ counter }}" class="lbl-toggle">{{ include.title | default: "Spoiler" }}</label>
-  <div class="collapsible-content">
-    <div class="content-inner" markdown="span">
-	
-      {{ include.content }}
-	  
+<div>
+	<button class="accordion" data-panel="{% increment counter %}">{{ include.title | default: "Spoiler" }}</button>
+	<div class="panel" id="panel-{{ counter | minus: 1 }}">
+		<div class="inner" markdown="span">
+			{{ include.content }}
+		</div>
 	</div>
-  </div>
 </div>

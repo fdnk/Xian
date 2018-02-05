@@ -1,3 +1,25 @@
 <div id="footer">
  <span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Reflexiones sobre Álgebra</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://fdnk.github.io/algebra/" property="cc:attributionName" rel="cc:attributionURL">Fernando Iván Danko</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>. </span> | <span> Tema por <a href="https://github.com/KrisYu">KrisYu</a></span> | <span>Powered by <a href="https://github.com">GitHub</a> </span> | <span>Compilado: {{ 'now' | date: "%b %d, %Y" }}</span>
 </div>
+<!-- Accordion script. Sorry for the place -->
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+console.log("" + acc.length + " accordiones detectados.");
+
+for (i = 0; i < acc.length; i++) {
+  console.log(" adding i: " + acc[i]);
+  acc[i].addEventListener("click", function() {
+	console.log("Clickeado panel "+this.dataset.panel);
+    this.classList.toggle("active");
+    var panel = document.getElementById("panel-"+this.dataset.panel);
+	console.log(panel);
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
