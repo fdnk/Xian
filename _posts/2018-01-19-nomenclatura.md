@@ -2,7 +2,7 @@
 title: Nomenclatura
 date: 2018-01-19 05:30:00 -0300
 layout: post
-tag: inicial
+tags: inicial
 ---
 
 En estos artículos utilizo la misma notación que en la materia Álgebra II, a excepción tal vez del producto interno, que me gusta usar los piquitos. 

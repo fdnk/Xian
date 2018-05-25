@@ -2,7 +2,7 @@
 title: Hallando preimágenes
 date: 2018-01-13 15:50:00 -0300
 layout: post
-tag: inicial
+tags: inicial
 ---
 
 Una transformación lineal mapea los elementos de su dominio en elementos de su imagen. Aquí, pretendemos hacer el camino inverso: Dado un vector de la imágen de la transformación lineal, hallar todos los vectores del dominio que son mapeados allí al transformarlos. 
