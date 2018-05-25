@@ -56,7 +56,7 @@ $$
 $$
 ```
 
-O bien se puede modificar el texto a mostrarse, por ejemplo, acá se usa un número romano I:
+Para las ecuaciones que no están dentro de un align, es necesario definir un tag (o ponerlas en un align o equation):
 ```
 [...] tales que $$T(x)=y \tag{I}\label{eq:preimagen_y}$$
 ```
@@ -65,3 +65,6 @@ Para referenciar dichos labels, la forma es:
 ```
 Ahora, reemplazo x en la ecuación \eqref{eq:preimagen_y}:
 ```
+
+Más info en: http://mathjax.readthedocs.io/en/latest/tex.html#automatic-equation-numbering
+(La configuración de mathjax está en `_includes/scripts.html`).
