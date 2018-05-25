@@ -61,6 +61,8 @@ Para las ecuaciones que no están dentro de un align, es necesario definir un ta
 [...] tales que $$T(x)=y \tag{I}\label{eq:preimagen_y}$$
 ```
 
+(El comando tag puede utilizarse para taggear una ecuación sin usar un label)
+
 Para referenciar dichos labels, la forma es: 
 ```
 Ahora, reemplazo x en la ecuación \eqref{eq:preimagen_y}:
