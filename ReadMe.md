@@ -44,3 +44,24 @@ Para utilizar una de estas clases en un bloquote, hacer por ejemplo:
 {:.warning}
 ```
 
+# Labels para las ecuaciones
+Se puede poner un label de la forma usual en LaTeX, por ejemplo:
+```
+$$
+\begin{align}
+	T(v_1)&=w_1  \nonumber \\
+	&\vdots \label{eq:T} \\
+	T(v_k)&=w_k \nonumber 
+\end{align}
+$$
+```
+
+O bien se puede modificar el texto a mostrarse, por ejemplo, acá se usa un número romano I:
+```
+[...] tales que $$T(x)=y \tag{I}\label{eq:preimagen_y}$$
+```
+
+Para referenciar dichos labels, la forma es: 
+```
+Ahora, reemplazo x en la ecuación \eqref{eq:preimagen_y}:
+```
