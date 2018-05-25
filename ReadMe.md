@@ -10,3 +10,37 @@ Utilicé el template de Xian, el readme original puede encontrarse en ``Xian.md`
   - Agregados tags: http://longqian.me/2017/02/09/github-jekyll-tag/
   - Agregado Accordion -- modificado de https://www.w3schools.com/howto/howto_js_accordion.asp
 
+# Accordion
+Para evitar que demostraciones o explicaciones tediosas molesten a la lectura, estas se esconden en un accordion con un
+título descriptivo, el cual las muestra al hacer click en él.
+
+Para crear un accordion, hacer algo así:
+```
+{% capture nota_cl %}
+Al multiplicar una matriz a derecha por un vector, estamos haciendo combinaciones lineales de sus columnas.
+<br/>
+Ejemplo: Consideremos el producto $$Ax = \mtx{1 & 4 \\ 0 & -1 \\ 1 & 2} \mtx{2 \\ -1} =\mtx{-2 \\ 1 \\ 0}$$.
+<br/>
+Esto puede interpretarse como la combinación lineal de las columnas de $$A$$ según los coeficientes del vector $$x$$:
+<br/>
+$$Ax = \mtx{1 & 4 \\ 0 & -1 \\ 1 & 2} \mtx{2 \\ -1} = 2\mtx{1 \\ 0 \\ 1} + (-1) \mtx{4 \\  -1 \\  2} = \mtx{-2 \\ 1 \\ 0}$$.
+<br/>
+<br/>
+En el desarrollo anterior, realizamos el camino inverso, escribiendo la combinación lineal como el producto de una matriz cuyas columnas son los vectores $$u_1 \cdots u_k$$ multiplicada  por un  vector con los coeficientes de la combinación lineal original.
+{% endcapture %}
+
+{% include collapsable.html  content=nota_cl title="Me perdí" %}
+```
+
+No es lo mejor del mundo, pero funciona.
+
+# Blockquotes de colores
+Se definieron las clases `.teorema`, `.success`, `.warning` y `.note`, cada cual con un color característico.
+
+Para utilizar una de estas clases en un bloquote, hacer por ejemplo:
+
+```
+> Texto del bloquote
+{:.warning}
+```
+
