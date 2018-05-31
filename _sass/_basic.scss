@@ -57,3 +57,18 @@ h6 {
   font-size: 1.3rem; }
 
 pre { white-space: pre; overflow: auto; }
+
+@media print {
+    .content {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
