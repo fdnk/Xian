@@ -20,7 +20,7 @@ En estos artículos utilizo la misma notación que en la materia Álgebra II, a 
 
 
 ## Genéricos
-  - $$\K$$ un [cuerpo](https://es.wikipedia.org/wiki/Cuerpo_(matem%C3%A1ticas)), aquí es siempre $$\K=\RR$$ ó $$\CC$$. 
+  - $$\KK$$ un [cuerpo](https://es.wikipedia.org/wiki/Cuerpo_(matem%C3%A1ticas)), aquí es siempre $$\KK=\RR$$ ó $$\CC$$. 
   - $$\VV$$ y $$\WW$$ denotan por lo general un [espacio vectorial](https://es.wikipedia.org/wiki/Espacio_vectorial)
 
 ## Operaciones, operadores y transformaciones
@@ -29,6 +29,9 @@ En estos artículos utilizo la misma notación que en la materia Álgebra II, a 
   - $$\herm{A}$$ denota la transpuesta hermítica de la matriz $$A$$. Es decir, si $$A=[a_{ij}],\, \herm{A} = [\conj{a}_{ji}] = \trans{\conj{A}}$$
   - $$\proy{S}{x}$$ es la [proyección ortogonal](https://en.wikipedia.org/wiki/Projection_(linear_algebra)) de $$x$$ sobre el subespacio $$S$$.
   - $$\inner{\cdot}{\cdot}$$ denota un [producto interno](https://es.wikipedia.org/wiki/Producto_escalar).
+  - $$\norm{x}$$ denota la norma del vector x. Salvo aclaración explícita, se considera inducida por el PI utilizado. Es decir: $$\norm{x} = \sqrt{\inner{x}{x}}$$.
+  - $$\norm{x}_p, \, p \in \RR$$ denota la norma p del vector x, es decir: $$\norm{x}_p = \sqrt[p]{\abs{x_1}^p + \cdots + \abs{x_n}^p}$$.
+  - $$\norm{x}_{\inf}$$ denota la norma infinito de x, esto es, el módulo de mayor de sus componentes en módulo: $$\norm{x}_{\inf} = \argmax{i} \abs{x_i}$$.
   - $$\penrose{A}$$ es la [pseudoinversa de Moore--Penrose](https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse) de $$A$$. 
 
 ## Espacios Vectoriales

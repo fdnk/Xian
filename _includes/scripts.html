@@ -38,7 +38,8 @@ MathJax.Hub.Config({
 	  trans: ["{ {#1}^{\\text{T}} }", 1],
 	  herm: ["{ {#1}^{\\text{H}} }", 1],
 	  conj: ["{ \\bar{#1} }", 1],
-	  norm: ["{ \\left \\| {#1} \\right \\| }", 1],
+	  abs: ["{ \\left\\lvert {#1} \\right\\rvert }", 1],
+	  norm: ["{ \\left\\lVert {#1} \\right\\rVert }",1],
 	  penrose: ["{ {#1}^{\\dagger} }", 1],
 	  proy: ["{ \\mathcal{P}_{#1} \\left (  #2  \\right ) }", 2],
       Re: ["{ \\mathfrak{Re} \\left( #1 \\right) }", 1],
@@ -49,6 +50,9 @@ MathJax.Hub.Config({
 	  then: "\\Rightarrow",
 	  sii: "\\text{sii}",
 	  qed: "\\tag*{$\\square$}",
+	  argmax: ["\\operatorname{argmax}\\limits_{#1}", 1],
+	  argmin: ["\\operatorname{argmin}\\limits_{#1}", 1],
+	  
 	  
 	  // Spaces
 	  gen: ["{ gen \\left \\lbrace #1 \\right \\rbrace }",1],
