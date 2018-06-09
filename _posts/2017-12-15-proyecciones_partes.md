@@ -1,7 +1,7 @@
 ---
 title: Proyecciones por pedazos
 date: 2017-12-15 06:24:00 -0300
-tags: intermedio
+tags: intermedio PI Proyecciones
 layout: post
 ---
 Este es un ejercicio de final. Nos pide "extender una proyección" de forma tal que proyecte en un subespacio "más grande". Hay varias formas de encarar el ejercicio, pero analizando con cuidado, podemos llegar a conclusiones muy interesantes en el proceso.

@@ -2,7 +2,7 @@
 title: Teléfonos y DVS (una DVS como banco de filtros)
 date: 2018-02-08 01:42:00 -0300
 layout: post
-tags: avanzado borrador
+tags: avanzado borrador DVS
 ---
 
 Una de las formas que más me gusta ver una DVS es, como lo llamamos en Telecomunicaciones, un "banco de filtros". No voy a ahondar más en qué cosa es esa, solo tomo el nombre para el enfoque que voy a explicar.

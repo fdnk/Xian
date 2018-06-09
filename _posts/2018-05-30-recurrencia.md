@@ -2,7 +2,7 @@
 title: Resolviendo Ecuaciones de Recurrencia
 date: 2018-05-30 17:41:00 -0300
 layout: post
-tags: intermedio
+tags: intermedio autovectores
 ---
 
 Una aplicación de los autovectores de $$A^k$$ es la de resolver una ecuación de recurrencia lineal.
