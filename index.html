@@ -4,20 +4,19 @@ active: index
 ---
 {% include base.html%}
 <div id="banner">
+  <span class="sub_info"> última actualización </span>
   <span class="date">{{ site.time | date: "%b,%d %Y"  }}</span>
-  <span class="sub_info"> today </span>
 </div>
-
+<!--
 <div class="posts">
   {% for post in paginator.posts %}
-  <article class="post">
+  <article class="post-list">
     <h2><a href="{{base}}{{ post.url }}"> {{ post.title | escape}} </a></h2>
     <p>{{ post.content | truncatewords: 15 }}</p>
   </article>
   {% endfor %}
 </div>
 
-<!-- Pagination links -->
 <div class="pager">
   {% if paginator.previous_page %}
     <a href="{{base}}{{ paginator.previous_page_path }}" class="pre">Anterior</a>
@@ -25,4 +24,32 @@ active: index
   {% if paginator.next_page %}
     <a href="{{base}}{{ paginator.next_page_path }}" class="next">Siguiente</a>
   {% endif %}
+</div>
+-->
+
+<div class="post">
+  <div class="content">
+	<h1>¿Qué es esta locura?</h1>
+    <p>El objetivo de esta página es brindar puntos de vista interesantes sobre los contenidos de la materia <a href="http://materias.fi.uba.ar/6108/">Álgebra II</a> de <a href="http://fi.uba.ar">FIUBA</a>. El material presente aquí puede contener errores u omisiones, y no pretende ser una bibliografía basica sobre la materia.</p>
+  
+    <h1>Índice</h1>
+    <h2>Cosas teóricas</h2>
+    <ul>
+      <li><a href="{{ site.baseurl }}{% post_url 2018-02-03-proyeccion %}">Matriz de TL de una Proyección</a>
+        <ul>
+          <li><a href="{{ site.baseurl }}{% post_url 2018-07-17-otras-demostraciones-proyeccion %}">Otras Demostraciones de la Matriz de Proyección</a></li>
+        </ul>
+      </li>
+      <li><a href="{{ site.baseurl }}{% post_url 2018-01-19-pi_bon %}">Definiendo un PI mediante una BON</a></li>
+      <li><a href="{{ site.baseurl }}{% post_url 2018-01-19-nomenclatura %}">Nomenclatura</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2>Cosas de ejercicios</h2>
+    <ul>
+      <li><a href="{{ site.baseurl }}{% post_url 2018-01-13-preimagenes %}">Hallando preimágenes</a></li>
+      <li><a href="{{ site.baseurl }}{% post_url 2017-12-15-proyecciones_partes %}">Proyecciones por pedazos</a></li>
+      <li><a href="{{ site.baseurl }}{% post_url 2018-05-30-recurrencia %}">Resolviendo Ecuaciones de Recurrencia</a></li>
+    </ul>
+  </div>
 </div>

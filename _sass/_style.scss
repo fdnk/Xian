@@ -21,7 +21,16 @@ main {
 	border-left: 1px solid #efefef;
 	position: relative;
 
-
+  .description {
+    a {
+      color:#000;
+      text-decoration: underline;
+      &:hover{
+        color:#00a2ff;
+      }
+	}
+  }
+  
   .posts {
     .meta {
       display: none;
@@ -158,6 +167,14 @@ main {
 			text-decoration: underline;
 		}
 	}
+}
+
+.post-list {
+    border-top: 1px solid #e0e0e0;
+    padding: 0px 0px 0px 50px;
+    h2.title {
+        font-size: 20px;
+    }
 }
 
 .post {
