@@ -152,11 +152,38 @@ Entonces $$\herm{U} w = \vec{0}$$ pues $$w$$ es ortogonal a las columnas de $$U$
 
 Por lo expuesto, podemos concluir que $$P_S(x) = w\herm{w} x$$, y por ende, $$[P_S]_E = w\herm{w}$$.
 
+## Demostración vía descomposición ortogonal
+Podemos obtener la matriz $$[\mathcal{P}_{S}]_E$$ analizando sus autovectores y autovalores.
+
+Sabemos que $$\forall x \in S: \proy{S}{x} = x \then x \in S_{\lambda=1}$$
+Y que además: $$\forall x \in \ortog{S}: \proy{S}{x} = 0 = 0x \then x \in S_{\lambda=0}$$
+
+Llamemos $$\{u_1, \cdots, u_k\}$$ BON de $$S$$ y $$\{w_{k+1}, \cdots, w_n\}$$ BON de $$\ortog{S}$$.
+
+Como $$\VV = S \bigoplus \ortog{S}$$ podemos obtener una BON de $$\VV$$ uniendo una BON de $$S$$ con una de $$\ortog{S}$$. Esta resulta una base ortogonormal formada por autovectores de $$[\mathcal{P}_{S}]_E$$. Por ende podemos descomponer ortogonalmente (o unitariamente en $$\CC[n](\CC)$$, usando la transpuesta conjugada) como:
+
+$$\begin{align}
+[\mathcal{P}_{S}]_E &= P D \trans{P} \\
+[\mathcal{P}_{S}]_E &= \mtx{u_1, \cdots, u_k, w_{k+1}, \cdots, w_n} \mtx{
+1 & 0 & \cdots & 0 &             0 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 &             0 & 0 & \cdots & 0 \\
+\vdots&\vdots& &\vdots&     \vdots & \vdots &   & \vdots \\
+0 & 0 & \cdots & 1 &             0 & 0 & \cdots & 0 \\
+0 & 0 & \cdots & 0 &             0 & 0 & \cdots & 0 \\
+\vdots&\vdots& &\vdots&     \vdots & \vdots &   & \vdots \\
+0 & 0 & \cdots & 0 &             0 & 0 & \cdots & 0 \\ } \mtx{\trans{u_1}\\ \vdots \\ \trans{u_k}\\ \trans{w_{k+1}} \\ \vdots \\ \trans{w_n} }
+\end{align}$$
+
+Vemos que los $$k$$ primeros vectores de $$P$$, los que generan $$S$$, quedan multiplicados por unos; mientras que aquellos que generan $$\ortog{S}$$ quedan multiplicados por ceros. Podemos eliminar todos los vectores que se anulan, quedando:
+
+$$[\mathcal{P}_{S}]_E = \mtx{u_1, \cdots, u_k} I_k \mtx{\trans{u_1}\\ \vdots \\ \trans{u_k}}$$
+
+Ahora llamando $$U = \mtx{u_1, \cdots, u_k}$$ llegamos a expresión:
+
+$$[\mathcal{P}{S}]_E = U \trans{U}$$
 
 ## Demostración vía transformaciones lineales
-Si lo anterior no fue suficiente aún hay resta otra demostración posible, relacionada con la matriz de transformación lineal en una base particular (*spoiler*: la base en que queda diagonal --sí, la de autovectores, pero ¿qué es eso?--).
-
-
+No es necesario utilizar conceptos de autovectores y autovalores para obtener la expresión, podemos hacer lo mismo utilizando sólo conceptos de transformaciones lineales, analizando la matriz de la transformación en una base particular.
 
 > Vamos a trabajar en el espacio vectorial $$\VV=\CC[n]$$, con el producto interno canónico, definido como $$\inner{x}{y} \eqdef \herm{y} x$$.
 {:.note}
