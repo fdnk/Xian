@@ -50,7 +50,7 @@ En el caso anterior abusamos de encontrar las cosas "a ojo", aquí vamos a anali
 
 Llamemos $$S=\gen{ \mtx{0\\-1\\-1\\0} }$$, y $$W=\col{A}$$ por lo dicho anteriormente, donde $$\dim{W}=2$$. Debemos hallar $$\proy{W+S}{x}$$, donde llamamos $$U=W+S$$. Podemos demostrar que $$\proy{A+B}{x} = \proy{A}{x} + \proy{B}{x}$$ en el caso que $$A \perp B$$. Este es el hecho por el cual, en la fórmula de la proyección, podemos sumar las proyecciones sobre cada uno de los elementos de la base ortogonal de $$T$$, $$\{t_1, \ldots, t_k\}$$:
 
-$$\proy{T}{x} = \frac{\inner{t_1}{x}} {\inner{t_1}{t_1}} + \ldots + \frac{\inner{t_k}{x}}{\inner{t_k}{t_k}}$$
+$$\proy{T}{x} = \frac{\inner{t_1}{x}} {\inner{t_1}{t_1}} t_1 + \ldots + \frac{\inner{t_k}{x}}{\inner{t_k}{t_k}} t_k$$
 
 Por lo tanto, si $$S$$ fuese un subespacio ortogonal a $$\WW$$, la solución sería simplemente sumar ambas proyecciones; como podemos verificar, este no es el caso.
 Sin embargo, es un problema similar al que nos topamos al querer proyectar sobre un espacio del cual tenemos una base que no es ortogonal. ¿Qué hacemos entonces? Sí, Gram-Schmidt (siempre y cuando no podramos huír de él de alguna forma).
@@ -62,15 +62,15 @@ Dicho con cuentitas, si $$\{v_1, \ldots, v_k\}$$ es la base a ortogonalizar, tom
 ## Resolviendo el ejercicio
 Imaginemos que disponemos de una BOG de $$U$$: $$\{u_1, u_2, u_3\}$$. La fórmula de proyección quedaría:
 
-$$\proy{U}{x} = \frac{\inner{u_1}{x}} {\inner{u_1}{u_1}} + \frac{\inner{u_2}{x}} {\inner{u_2}{u_2}}  + \frac{\inner{u_3}{x}}{\inner{u_3}{u_3}}$$
+$$\proy{U}{x} = \frac{\inner{u_1}{x}} {\inner{u_1}{u_1}} u_1+ \frac{\inner{u_2}{x}} {\inner{u_2}{u_2}} u_2+ \frac{\inner{u_3}{x}}{\inner{u_3}{u_3}} u_3$$
 
 Supongamos tambien que $$\{u_1, u_2\}$$ es una BOG de $$\WW$$. Podríamos decir que:
 
-$$\proy{W}{x} = \frac{\inner{u_1}{x}} {\inner{u_1}{u_1}} + \frac{\inner{u_2}{x}} {\inner{u_2}{u_2}}$$
+$$\proy{W}{x} = \frac{\inner{u_1}{x}} {\inner{u_1}{u_1}} u_1 + \frac{\inner{u_2}{x}} {\inner{u_2}{u_2}} u_2$$
 
 Donde $$\proy{W}{x}$$ no es otra cosa que la proyección que nos dan: $$h(x)$$. Reemplazando estos dos términos en la fórmula de proyección sobre $$U$$ tenemos:
 
-$$\proy{U}{x} = h(x) + \frac{\inner{u_3}{x}}{\inner{u_3}{u_3}}$$
+$$\proy{U}{x} = h(x) + \frac{\inner{u_3}{x}}{\inner{u_3}{u_3}} u_3$$
 
 
 Imaginar eso casí resolvió el problema, solo faltaría hallar $$u_3$$ que complete la base y sea ortogonal al conjunto $$\{u_1, u_2\}$$, que son una BOG de $$\WW$$. Para ello, vamos a definir $$u_3 = \proy{\ortog{W}}{ \mtx{0\\-1\\-1\\0} }$$, que es la proyección del generador de $$S$$ que faltaba.
@@ -95,7 +95,7 @@ $$
    0 &  0 &  0 &  0 }}
    
 \begin{align*}%*
-P_U(x) 	&= h(x) + \frac{\inner{u_3}{x}}{\inner{u_3}{u_3}}\\
+P_U(x) 	&= h(x) + \frac{\inner{u_3}{x}}{\inner{u_3}{u_3}} u_3\\
 		&= h(x) + \frac{1}{\inner{u_3}{u_3}} (\trans{u_3} {x}) u_3 \tag{def. PIC}\\
 		&= h(x) + \frac{1}{\inner{u_3}{u_3}} u_3 (\trans{u_3} {x}) \tag{nota I}\\
 		&= h(x) + \frac{1}{\inner{u_3}{u_3}} (u_3 \trans{u_3}) {x} \tag{nota II}\\
@@ -111,3 +111,5 @@ $$
   - *Nota II*: Puedo asociar de esa forma el producto para obtener la matriz $$u_3 \trans{u_3}$$ y despejar $$x$$.
 
 El proceso anterior puede parecer bastante confuso, pero no es más que una forma algebráicamente elegante de llegar al resultado. El lector puede resolverlo a su manera llegando al mismo resultado en más o menos pasos. 
+
+*1/7/18: Agradezco a G. Lucarena por avisarme que había un typo en las fórmulas de proyección.*
